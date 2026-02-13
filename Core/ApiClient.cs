@@ -10,5 +10,9 @@ namespace SimpsonsApiTests.Core
         {
             _client = new RestClient(baseUrl);
         }
+        public async Task<RestResponse> GetAsync(string endpoint)
+        {
+            var request = new RestRequest();
+        }
     }
 }
