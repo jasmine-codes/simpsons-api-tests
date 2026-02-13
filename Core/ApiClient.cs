@@ -12,7 +12,8 @@ namespace SimpsonsApiTests.Core
         }
         public async Task<RestResponse> GetAsync(string endpoint)
         {
-            var request = new RestRequest();
+            var request = new RestRequest(endpoint, Method.Get);
+            return await _client.ExecuteAsync(request);
         }
     }
 }
