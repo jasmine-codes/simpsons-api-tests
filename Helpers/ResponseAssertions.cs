@@ -13,7 +13,7 @@ namespace SimpsonsApiTests.Helpers
 
         public static void AssertNotEmpty(string? value, string fieldName)
         {
-            
+            Assert.That(value, Is.Not.Null.And.Not.Empty, $"{fieldName} should not be empty");
         }
     }
 }
