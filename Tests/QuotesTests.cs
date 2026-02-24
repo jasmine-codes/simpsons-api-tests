@@ -13,6 +13,8 @@ namespace SimpsonsApiTests.Tests
         public async Task Get_Default_Quotes_Returns_200_And_ValidQuote()
         {
             var response = await ApiClient.GetAsync<List<Quote>>("/quotes");
+
+            ResponseAssertions.AssertStatus(response, 200);
         }
     }
 }
