@@ -17,6 +17,8 @@ namespace SimpsonsApiTests.Tests
             ResponseAssertions.AssertStatus(response, 200);
 
             var quotes = response.Data;
+            Assert.That(quotes, Is.Not.Null);
+            Assert.That(quotes!.Count, Is.GreaterThan(0));
         }
     }
 }
