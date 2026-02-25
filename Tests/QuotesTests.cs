@@ -15,6 +15,8 @@ namespace SimpsonsApiTests.Tests
             var response = await ApiClient.GetAsync<List<Quote>>("/quotes");
 
             ResponseAssertions.AssertStatus(response, 200);
+
+            var quotes = response.Data;
         }
     }
 }
