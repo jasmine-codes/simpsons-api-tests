@@ -19,6 +19,9 @@ namespace SimpsonsApiTests.Tests
             var quotes = response.Data;
             Assert.That(quotes, Is.Not.Null);
             Assert.That(quotes!.Count, Is.GreaterThan(0));
+
+            ResponseAssertions.AssertNotEmpty(quotes![0].SimpsonQuote, "Quote");
+            ResponseAssertions.AssertNotEmpty(quotes![0].Character, "Character");
         }
     }
 }
