@@ -30,6 +30,10 @@ namespace SimpsonsApiTests.Tests
             var response = await ApiClient.GetAsync<List<Quote>>("/quotes?count=3");
 
             ResponseAssertions.AssertStatus(response, 200);
+
+            var quotes = response.Data;
+            Assert.That(quotes, Is.Not.Null);
+            Assert.That(quotes!.Count, Is.EqualTo(3));
         }
     }
 }
