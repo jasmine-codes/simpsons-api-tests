@@ -23,5 +23,11 @@ namespace SimpsonsApiTests.Tests
             ResponseAssertions.AssertNotEmpty(quotes![0].SimpsonQuote, "Quote");
             ResponseAssertions.AssertNotEmpty(quotes![0].Character, "Character");
         }
+
+        [Test]
+        public async Task Get_Three_Quotes_Returns_Three()
+        {
+            
+        }
     }
 }
