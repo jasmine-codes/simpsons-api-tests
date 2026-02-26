@@ -27,7 +27,7 @@ namespace SimpsonsApiTests.Tests
         [Test]
         public async Task Get_Three_Quotes_Returns_Three()
         {
-            
+            var response = await ApiClient.GetAsync<List<Quote>>("/quotes?count=3");
         }
     }
 }
