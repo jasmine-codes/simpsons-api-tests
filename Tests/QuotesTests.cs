@@ -28,6 +28,8 @@ namespace SimpsonsApiTests.Tests
         public async Task Get_Three_Quotes_Returns_Three()
         {
             var response = await ApiClient.GetAsync<List<Quote>>("/quotes?count=3");
+
+            ResponseAssertions.AssertStatus(response, 200);
         }
     }
 }
