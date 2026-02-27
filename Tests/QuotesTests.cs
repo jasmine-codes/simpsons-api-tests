@@ -35,5 +35,11 @@ namespace SimpsonsApiTests.Tests
             Assert.That(quotes, Is.Not.Null);
             Assert.That(quotes!.Count, Is.EqualTo(3));
         }
+
+        [Test]
+        public async Task Get_Invalid_Endpoint_Returns_404()
+        {
+            
+        }
     }
 }
