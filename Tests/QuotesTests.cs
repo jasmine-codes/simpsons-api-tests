@@ -39,7 +39,7 @@ namespace SimpsonsApiTests.Tests
         [Test]
         public async Task Get_Invalid_Endpoint_Returns_404()
         {
-            
+            var response = await ApiClient.GetAsync("/invalid");
         }
     }
 }
