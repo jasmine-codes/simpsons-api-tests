@@ -21,7 +21,7 @@ namespace SimpsonsApiTests.Helpers
         {
             AssertNotEmpty(q.SimpsonQuote, "Quote");
             AssertNotEmpty(q.Character, "Character");
-            
+            AssertNotEmpty(q.Image, "Image");
         }
     }
 }
