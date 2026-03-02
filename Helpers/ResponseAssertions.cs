@@ -1,5 +1,6 @@
 using RestSharp;
 using NUnit.Framework;
+using SimpsonsApiTests.Models;
 
 namespace SimpsonsApiTests.Helpers
 {
@@ -16,9 +17,9 @@ namespace SimpsonsApiTests.Helpers
             Assert.That(value, Is.Not.Null.And.Not.Empty, $"{fieldName} should not be empty");
         }
 
-        public static void AssertValidQuote()
+        public static void AssertValidQuote(Quote q)
         {
-            
+
         }
     }
 }
