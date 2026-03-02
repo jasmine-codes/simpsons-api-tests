@@ -19,7 +19,7 @@ namespace SimpsonsApiTests.Helpers
 
         public static void AssertValidQuote(Quote q)
         {
-
+            AssertNotEmpty(q.SimpsonQuote, "Quote");
         }
     }
 }
