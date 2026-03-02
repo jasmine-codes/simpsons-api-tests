@@ -15,5 +15,10 @@ namespace SimpsonsApiTests.Helpers
         {
             Assert.That(value, Is.Not.Null.And.Not.Empty, $"{fieldName} should not be empty");
         }
+
+        public static void AssertValidQuote()
+        {
+            
+        }
     }
 }
