@@ -8,7 +8,7 @@ namespace SimpsonsApiTests.Helpers
 
         public static void LogRequest(RestRequest request)
         {
-
+            Console.WriteLine("--- REQUEST ---");
         }
         public static void LogResponse(RestResponse response)
         {
