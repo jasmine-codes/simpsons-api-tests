@@ -5,6 +5,11 @@ namespace SimpsonsApiTests.Helpers
 {
     public static class TestLogger
     {
+
+        public static void LogRequest(RestRequest request)
+        {
+
+        }
         public static void LogResponse(RestResponse response)
         {
             Console.WriteLine("---RESPONSE---");
