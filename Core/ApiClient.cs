@@ -1,4 +1,5 @@
 using RestSharp;
+using SimpsonsApiTests.Helpers;
 using System.Threading.Tasks;
 
 namespace SimpsonsApiTests.Core
@@ -13,12 +14,22 @@ namespace SimpsonsApiTests.Core
         public async Task<RestResponse> GetAsync(string endpoint)
         {
             var request = new RestRequest(endpoint, Method.Get);
-            return await _client.ExecuteAsync(request);
+
+            TestLogger.LogRequest(request);
+
+            var response = await _client.ExecuteAsync(request);
+
+            TestLogger.LogResponse(response);
+
+            return response;
         }
 
         public async Task<RestResponse<T>> GetAsync<T>(string endpoint)
         {
             var request = new RestRequest(endpoint, Method.Get);
+
+            TestLogger.LogRequest(request);
+            
             return await _client.ExecuteAsync<T>(request);
         }
     }
