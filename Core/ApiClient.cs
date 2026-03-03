@@ -29,8 +29,12 @@ namespace SimpsonsApiTests.Core
             var request = new RestRequest(endpoint, Method.Get);
 
             TestLogger.LogRequest(request);
-            
-            return await _client.ExecuteAsync<T>(request);
+
+            var response = await _client.ExecuteAsync<T>(request);
+
+            TestLogger.LogResponse(response);
+
+            return response;
         }
     }
 }
