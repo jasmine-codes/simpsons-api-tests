@@ -11,6 +11,7 @@ namespace SimpsonsApiTests.Helpers
             Console.WriteLine("--- REQUEST ---");
             Console.WriteLine($"Resource: {request.Resource}");
             Console.WriteLine($"Method: {request.Method}");
+            Console.WriteLine("----------------");
         }
         public static void LogResponse(RestResponse response)
         {
